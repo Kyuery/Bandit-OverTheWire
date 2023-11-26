@@ -27,6 +27,8 @@ To solve Bandit Level 5 → Level 6, follow these steps:
    ssh bandit5@bandit.labs.overthewire.org -p 2220
    ```
 
+   Enter the password when prompted (the password is the one you found in Level 4).
+
 2. Once you're logged in, navigate to the `inhere` directory using the `cd` command:
 
    ```bash
