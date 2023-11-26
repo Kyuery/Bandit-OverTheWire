@@ -43,12 +43,14 @@ To solve Bandit Level 6 → Level 7, follow these steps:
 4. Use the `cat` command to read the contents of the file:
 
    ```bash
-   cat path/to/found/file
+   cat /var/lib/dpkg/info/bandit7.password
    ```
 
-   Replace `path/to/found/file` with the actual path you obtained from the `find` command.
-
 5. The password for the next level will be displayed.
+
+   ```
+   z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+   ```
 
 6. Now, you have the password for Level 7. Use it to log in to Level 7 using SSH:
 
