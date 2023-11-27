@@ -24,3 +24,7 @@ The password for the next level is stored in the file `data.txt`, which is a hex
 ## Helpful Reading Material
 
 - [Hex dump on Wikipedia](https://en.wikipedia.org/wiki/Hex_dump)
+
+# Answer
+
+# ! CONTINUE !
