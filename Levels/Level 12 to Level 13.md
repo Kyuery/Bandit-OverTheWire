@@ -100,5 +100,3 @@ ssh bandit13@bandit.labs.overthewire.org -p 2220
 ```
 
 Enter the password you found when prompted.
-
-Congratulations! You've completed Bandit Level 12 → Level 13. Keep going, and feel free to ask if you have any questions!
