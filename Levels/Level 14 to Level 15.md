@@ -21,3 +21,37 @@ The password for the next level can be retrieved by submitting the password of t
 - [Ports](<https://en.wikipedia.org/wiki/Port_(computer_networking)>)
 
 # Answer
+
+To solve Bandit Level 14 → Level 15, follow these steps:
+
+1. Log into the server for Level 14 using SSH. The command is:
+
+   ```bash
+   ssh bandit14@bandit.labs.overthewire.org -p 2220
+   ```
+
+   Enter the password when prompted (the password is the one you found in Level 13).
+
+2. Use the `telnet` command to connect to port 30000 on localhost and submit the current password:
+
+   ```bash
+   telnet localhost 30000
+   ```
+
+   If you don't have `telnet` installed, you can use `nc` (netcat) instead:
+
+   ```bash
+   echo "current_password" | nc localhost 30000
+   ```
+
+   Replace `current_password` with the password you found in Level 14.
+
+3. Submit the current password through either `telnet` or `nc`, and the password for the next level will be displayed.
+
+4. Now, you have the password for Level 15. Use it to log in to Level 15 using SSH:
+
+   ```bash
+   ssh bandit15@bandit.labs.overthewire.org -p 2220
+   ```
+
+   Enter the password you found when prompted.
