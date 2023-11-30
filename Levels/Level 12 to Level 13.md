@@ -135,6 +135,12 @@ To solve Bandit Level 12 → Level 13, follow these steps:
    rm data5.tar
    ```
 
+   Next
+
+   ```bash
+   # data6.bin: bzip2 compressed data, block size = 900k
+   ```
+
 8. Use the `file` command again on the output file to determine the compression type, and decompress if necessary.
 
 9. Repeat the process until you get the password for the next level.
