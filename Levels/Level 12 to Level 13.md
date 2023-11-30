@@ -115,26 +115,31 @@ To solve Bandit Level 12 → Level 13, follow these steps:
    Next
 
    ```bash
-   # data5.bin: POSIX tar archive (GNU)
-
    rm output_file.tar
    rm data.txt
 
    ```
 
-8. Once you have the hexdump of the file, you can use a command like `xxd` to reverse the hexdump:
+   Next
 
    ```bash
-   xxd -r data.txt > output_file
+   # data5.bin: POSIX tar archive (GNU)
+
+   mv data5.bin data5.tar
+   tar xf data5.tar
    ```
 
-   This command will reverse the hexdump and save the result in `output_file`.
+   Next
 
-9. Use the `file` command again on the output file to determine the compression type, and decompress if necessary.
+   ```bash
+   rm data5.tar
+   ```
 
-10. Repeat the process until you get the password for the next level.
+8. Use the `file` command again on the output file to determine the compression type, and decompress if necessary.
 
-11. Now, you have the password for Level 13. Use it to log in to Level 13 using SSH:
+9. Repeat the process until you get the password for the next level.
+
+10. Now, you have the password for Level 13. Use it to log in to Level 13 using SSH:
 
 ```bash
 ssh bandit13@bandit.labs.overthewire.org -p 2220
