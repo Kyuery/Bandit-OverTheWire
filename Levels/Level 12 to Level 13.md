@@ -29,156 +29,104 @@ The password for the next level is stored in the file `data.txt`, which is a hex
 
 To solve Bandit Level 12 → Level 13, follow these steps:
 
-1. Log into the server for Level 12 using SSH. The command is:
+1. SSH Login to Level 12:
 
    ```bash
    ssh bandit12@bandit.labs.overthewire.org -p 2220
    ```
 
-   Enter the password when prompted (the password is the one you found in Level 11).
+   Enter the Level 11 password when prompted.
 
-2. Create a temporary directory under `/tmp`. You can use the `mkdir` command:
+2. Create a Temporary Working Directory:
 
    ```bash
    mkdir /tmp/myname123
    ```
 
-   This directory will be used to work on the files.
+   This directory will serve as the workspace for file manipulation.
 
-3. Copy the `data.txt` file to the temporary directory using the `cp` command:
+3. Copy `data.txt` to the Temporary Directory:
 
    ```bash
    cp data.txt /tmp/myname123/
    ```
 
-4. Navigate to the temporary directory:
+4. Navigate to the Temporary Directory:
 
    ```bash
    cd /tmp/myname123
    ```
 
-5. Use the `file` command to determine the type of the file:
+5. Determine Compression Type:
 
    ```bash
    file data.txt
    ```
 
-   The output will tell you the type of compression used. You may see references to gzip, bzip2, etc.
+   Identify the compression type used (e.g., gzip, bzip2).
 
-6. Once you have the hexdump of the file, you can use a command like `xxd` to reverse the hexdump:
+6. Reverse the Hexdump Using `xxd`:
 
    ```bash
    xxd -r data.txt > output_file
    ```
 
-   This command will reverse the hexdump and save the result in `output_file`.
-
-7. Decompress the file and change file extension accordingly. Depending on the compression type, you can use commands like `gunzip`, `bunzip2`, or `tar`. Repeat the process of checking the file type and decompressing until you get the hexdump of the file.
+7. Decompress and Change File Extensions:
+   Depending on the compression type, use appropriate commands. Repeat this process until you reach the hexdump.
 
    ```bash
-   # file: gzip compressed data, was "data2.bin", last modified: Thu Oct  5 06:19:20 2023, max compression, from Unix, original size modulo 2^32 573
-
+   # For gzip
    mv output_file output_file.gz
    gzip -d output_file.gz
-   ```
 
-   Next
-
-   ```bash
-   # file: bzip2 compressed data, block size = 900k
-
+   # For bzip2
    mv output_file output_file.bz2
    bzip2 -d output_file.bz2
 
-   ```
-
-   Next
-
-   ```bash
-   # file: gzip compressed data, was "data4.bin", last modified: Thu Oct  5 06:19:20 2023, max compression, from Unix, original size modulo 2^32 20480
-
-   mv output_file output_file.bz2
-   bzip2 -d output_file.bz2
-
-   ```
-
-   Next
-
-   ```bash
-   # file: POSIX tar archive (GNU)
-
+   # For tar
    mv output_file output_file.tar
    tar xvf output_file.tar
 
-   ```
-
-   Next
-
-   ```bash
+   # Clean up
    rm output_file.tar
    rm data.txt
 
-   ```
-
-   Next
-
-   ```bash
-   # data5.bin: POSIX tar archive (GNU)
-
+   # For data5.bin
    mv data5.bin data5.tar
    tar xf data5.tar
-   ```
-
-   Next
-
-   ```bash
    rm data5.tar
-   ```
 
-   Next
-
-   ```bash
-   # data6.bin: bzip2 compressed data, block size = 900k
-
+   # For data6.bin
    mv data6.bin data6.bz2
    bzip2 -d data6.bz2
 
-   ```
-
-   Next
-
-   ```bash
-   # data6: POSIX tar archive (GNU)
-
+   # For data6
    mv data6 data6.tar
    tar xf data6.tar
-
-   ```
-
-   Next
-
-   ```bash
    rm data6.tar
+
+   # For data8.bin
+   mv data8.bin data8.gz
+   gzip -d data8.gz
    ```
 
-   Next
+8. Determine Compression Type Again:
 
    ```bash
-   # data8.bin: gzip compressed data, was "data9.bin", last modified: Thu Oct  5 06:19:20 2023, max compression, from Unix, original size modulo 2^32 49
-
-   mv output_file output_file.bz2
-   bzip2 -d output_file.bz2
-
+   file output_file
    ```
 
-8. Use the `file` command again on the output file to determine the compression type, and decompress if necessary.
+9. Repeat the Decompression Process:
+   Continue decompressing until the password is revealed.
 
-9. Repeat the process until you get the password for the next level.
+   ```bash
+   The password is wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+   ```
 
-10. Now, you have the password for Level 13. Use it to log in to Level 13 using SSH:
+10. SSH Login to Level 13:
 
-```bash
-ssh bandit13@bandit.labs.overthewire.org -p 2220
-```
+    ```bash
+    ssh bandit13@bandit.labs.overthewire.org -p 2220
+    ```
 
-Enter the password you found when prompted
+    Use the password obtained in the previous steps.
