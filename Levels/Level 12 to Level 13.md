@@ -139,6 +139,36 @@ To solve Bandit Level 12 → Level 13, follow these steps:
 
    ```bash
    # data6.bin: bzip2 compressed data, block size = 900k
+
+   mv data6.bin data6.bz2
+   bzip2 -d data6.bz2
+
+   ```
+
+   Next
+
+   ```bash
+   # data6: POSIX tar archive (GNU)
+
+   mv data6 data6.tar
+   tar xf data6.tar
+
+   ```
+
+   Next
+
+   ```bash
+   rm data6.tar
+   ```
+
+   Next
+
+   ```bash
+   # data8.bin: gzip compressed data, was "data9.bin", last modified: Thu Oct  5 06:19:20 2023, max compression, from Unix, original size modulo 2^32 49
+
+   mv output_file output_file.bz2
+   bzip2 -d output_file.bz2
+
    ```
 
 8. Use the `file` command again on the output file to determine the compression type, and decompress if necessary.
