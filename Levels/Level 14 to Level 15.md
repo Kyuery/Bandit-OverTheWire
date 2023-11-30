@@ -48,6 +48,10 @@ To solve Bandit Level 14 → Level 15, follow these steps:
 
 3. Submit the current password through either `telnet` or `nc`, and the password for the next level will be displayed.
 
+   ```
+   jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+   ```
+
 4. Now, you have the password for Level 15. Use it to log in to Level 15 using SSH:
 
    ```bash
