@@ -73,13 +73,13 @@ To solve Bandit Level 12 → Level 13, follow these steps:
 
    This command will reverse the hexdump and save the result in `output_file`.
 
-7. Decompress the file and change file extension accordingly. Depending on the compression type, you can use commands like `gunzip`, `bunzip2`, or `tar`:
+7. Decompress the file and change file extension accordingly. Depending on the compression type, you can use commands like `gunzip`, `bunzip2`, or `tar`. Repeat the process of checking the file type and decompressing until you get the hexdump of the file.
 
    ```bash
    # file: gzip compressed data, was "data2.bin", last modified: Thu Oct  5 06:19:20 2023, max compression, from Unix, original size modulo 2^32 573
 
    mv output_file output_file.gz
-   gzip -d gzip output_file.gz
+   gzip -d output_file.gz
    ```
 
    Next
@@ -102,9 +102,27 @@ To solve Bandit Level 12 → Level 13, follow these steps:
 
    ```
 
-8. Repeat the process of checking the file type and decompressing until you get the hexdump of the file.
+   Next
 
-9. Once you have the hexdump of the file, you can use a command like `xxd` to reverse the hexdump:
+   ```bash
+   # file: POSIX tar archive (GNU)
+
+   mv output_file output_file.tar
+   tar xvf output_file.tar
+
+   ```
+
+   Next
+
+   ```bash
+   # data5.bin: POSIX tar archive (GNU)
+
+   rm output_file.tar
+   rm data.txt
+
+   ```
+
+8. Once you have the hexdump of the file, you can use a command like `xxd` to reverse the hexdump:
 
    ```bash
    xxd -r data.txt > output_file
@@ -112,11 +130,11 @@ To solve Bandit Level 12 → Level 13, follow these steps:
 
    This command will reverse the hexdump and save the result in `output_file`.
 
-10. Use the `file` command again on the output file to determine the compression type, and decompress if necessary.
+9. Use the `file` command again on the output file to determine the compression type, and decompress if necessary.
 
-11. Repeat the process until you get the password for the next level.
+10. Repeat the process until you get the password for the next level.
 
-12. Now, you have the password for Level 13. Use it to log in to Level 13 using SSH:
+11. Now, you have the password for Level 13. Use it to log in to Level 13 using SSH:
 
 ```bash
 ssh bandit13@bandit.labs.overthewire.org -p 2220
