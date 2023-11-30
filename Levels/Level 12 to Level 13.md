@@ -99,4 +99,4 @@ To solve Bandit Level 12 → Level 13, follow these steps:
 ssh bandit13@bandit.labs.overthewire.org -p 2220
 ```
 
-Enter the password you found when prompted.
+Enter the password you found when prompted
