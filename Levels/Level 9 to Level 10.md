@@ -44,7 +44,7 @@ To solve Bandit Level 9 → Level 10, follow these steps:
 4. To find the password in `data.txt` preceded by several '=' characters, you can use the `strings` command along with `grep`:
 
    ```bash
-   strings data.txt | grep "====="
+   strings data.txt | grep "^="
    ```
 
    This command searches for human-readable strings in `data.txt` and filters out lines containing several '=' characters.
