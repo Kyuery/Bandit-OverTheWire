@@ -65,23 +65,7 @@ To solve Bandit Level 12 → Level 13, follow these steps:
 
    The output will tell you the type of compression used. You may see references to gzip, bzip2, etc.
 
-6. Decompress the file accordingly. Depending on the compression type, you can use commands like `gunzip`, `bunzip2`, or `tar`:
-
-   ```bash
-   gunzip data.txt  # If it's gzip compressed
-   ```
-
-   Or
-
-   ```bash
-   tar xvf data.txt  # If it's a tar archive
-   ```
-
-   If it's bzip2 compressed, use `bunzip2`, and so on.
-
-7. Repeat the process of checking the file type and decompressing until you get the hexdump of the file.
-
-8. Once you have the hexdump of the file, you can use a command like `xxd` to reverse the hexdump:
+6. Once you have the hexdump of the file, you can use a command like `xxd` to reverse the hexdump:
 
    ```bash
    xxd -r data.txt > output_file
@@ -89,11 +73,50 @@ To solve Bandit Level 12 → Level 13, follow these steps:
 
    This command will reverse the hexdump and save the result in `output_file`.
 
-9. Use the `file` command again on the output file to determine the compression type, and decompress if necessary.
+7. Decompress the file and change file extension accordingly. Depending on the compression type, you can use commands like `gunzip`, `bunzip2`, or `tar`:
 
-10. Repeat the process until you get the password for the next level.
+   ```bash
+   # file: gzip compressed data, was "data2.bin", last modified: Thu Oct  5 06:19:20 2023, max compression, from Unix, original size modulo 2^32 573
 
-11. Now, you have the password for Level 13. Use it to log in to Level 13 using SSH:
+   mv output_file output_file.gz
+   gzip -d gzip output_file.gz
+   ```
+
+   Next
+
+   ```bash
+   # file: bzip2 compressed data, block size = 900k
+
+   mv output_file output_file.bz2
+   bzip2 -d output_file.bz2
+
+   ```
+
+   Next
+
+   ```bash
+   # file: gzip compressed data, was "data4.bin", last modified: Thu Oct  5 06:19:20 2023, max compression, from Unix, original size modulo 2^32 20480
+
+   mv output_file output_file.bz2
+   bzip2 -d output_file.bz2
+
+   ```
+
+8. Repeat the process of checking the file type and decompressing until you get the hexdump of the file.
+
+9. Once you have the hexdump of the file, you can use a command like `xxd` to reverse the hexdump:
+
+   ```bash
+   xxd -r data.txt > output_file
+   ```
+
+   This command will reverse the hexdump and save the result in `output_file`.
+
+10. Use the `file` command again on the output file to determine the compression type, and decompress if necessary.
+
+11. Repeat the process until you get the password for the next level.
+
+12. Now, you have the password for Level 13. Use it to log in to Level 13 using SSH:
 
 ```bash
 ssh bandit13@bandit.labs.overthewire.org -p 2220
