@@ -41,14 +41,13 @@ To solve Bandit Level 14 → Level 15, follow these steps:
    If you don't have `telnet` installed, you can use `nc` (netcat) instead:
 
    ```bash
-   echo "current_password" | nc localhost 30000
+   echo "fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq" | nc localhost 30000
    ```
-
-   Replace `current_password` with the password you found in Level 14.
 
 3. Submit the current password through either `telnet` or `nc`, and the password for the next level will be displayed.
 
    ```
+   Correct!
    jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
    ```
 
