@@ -62,19 +62,39 @@ To solve Bandit Level 16 → Level 17, follow these steps:
 
 8. Create a temporary folder for the storage of the private key.
 
-   ```
+   ```bash
    mkdir /tmp/sshkeyb17
    ```
 
 9. Paste the RSA private key.
-   ```
+
+   ```bash
    vim sshkeyb17.key
    ```
-10. The password for the next level will be displayed in the SSL session output.
+
+10. Change file permission to read and write (rw-)
+
+    ```bash
+    chmod 600 sshkeyb17.key
+    ```
+
+11. Connect to bandit17 localhost
+
+    ```bash
+    ssh -i sshkeyb17.key bandit17@localhost -p 2220
+    ```
+
+12. Locate the password at /etc/bandit_pass
+
+    ```bash
+    cat /etc/bandit_pass/bandit17
+    ```
+
     ```
     VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e
     ```
-11. Now, you have the password for Level 17. Use it to log in to Level 17 using SSH:
+
+13. Now, you have the password for Level 17. Use it to log in to Level 17 using SSH:
 
     ```bash
     ssh bandit17@bandit.labs.overthewire.org -p 2220
