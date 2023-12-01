@@ -32,7 +32,8 @@ To solve Bandit Level 16 → Level 17, follow these steps:
 2. Use the `nmap` command to scan ports in the range 31000 to 32000 on localhost:
 
    ```bash
-   nmap -p 31000-32000 localhost
+   nmap -v -A -T4 -p 31000-32000 localhost
+
    ```
 
 3. Analyze the output to identify which ports have a server listening on them.
@@ -57,12 +58,26 @@ To solve Bandit Level 16 → Level 17, follow these steps:
 
    Replace `<port>` with the actual port number you found.
 
-7. The password for the next level will be displayed in the SSL session output.
+7. It will return a RSA private key. Copy the private key.
 
-8. Now, you have the password for Level 17. Use it to log in to Level 17 using SSH:
+8. Create a temporary folder for the storage of the private key.
 
-   ```bash
-   ssh bandit17@bandit.labs.overthewire.org -p 2220
+   ```
+   mkdir /tmp/sshkeyb17
    ```
 
-   Enter the password you found when prompted.
+9. Paste the RSA private key.
+   ```
+   vim sshkeyb17.key
+   ```
+10. The password for the next level will be displayed in the SSL session output.
+    ```
+    VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e
+    ```
+11. Now, you have the password for Level 17. Use it to log in to Level 17 using SSH:
+
+    ```bash
+    ssh bandit17@bandit.labs.overthewire.org -p 2220
+    ```
+
+    Enter the password you found when prompted.
