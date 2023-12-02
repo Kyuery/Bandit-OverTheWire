@@ -32,6 +32,10 @@ To solve Bandit Level 18 → Level 19, follow these steps:
 
 3. The password for the next level will be displayed.
 
+   ```
+   awhqfNnAbc1naukrpqDYcF95h7HoMTrC
+   ```
+
 4. Now, you have the password for Level 19. Use it to log in to Level 19 using SSH:
 
    ```bash
