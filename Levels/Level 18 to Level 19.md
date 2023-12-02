@@ -43,5 +43,3 @@ To solve Bandit Level 18 → Level 19, follow these steps:
    ```
 
    Enter the password you found when prompted.
-
-Congratulations! You've completed Bandit Level 18 → Level 19. Keep going, and feel free to ask if you have any questions!
