@@ -25,7 +25,7 @@ To solve Bandit Level 21 → Level 22, follow these steps:
 2. Check the contents of the `/etc/cron.d/` directory to find the configuration for the cron job:
 
    ```bash
-   cat /etc/cron.d/
+   cat /etc/cron.d/*
    ```
 
    This command will display the contents of all files in the `/etc/cron.d/` directory.
