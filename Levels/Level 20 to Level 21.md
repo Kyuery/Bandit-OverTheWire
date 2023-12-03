@@ -43,7 +43,7 @@ To solve Bandit Level 20 → Level 21, follow these steps:
 5. Start a listener on a port of your choice using the `nc` (netcat) command:
 
    ```bash
-   nc -l -p 12345
+   nc -l -v -p 12345
    ```
 
    Replace `12345` with the port number of your choice.
@@ -54,6 +54,12 @@ To solve Bandit Level 20 → Level 21, follow these steps:
    ./suconnect 12345
    ```
 
+   ```
+   bandit20@bandit:~$ ./suconnect 12345
+   Read: VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+   Password matches, sending next password
+   ```
+
    You should see a connection being made to `localhost`.
 
 7. In the terminal where you started the `nc` listener, type the password for Level 20 and press Enter.
@@ -61,6 +67,14 @@ To solve Bandit Level 20 → Level 21, follow these steps:
 8. The `suconnect` program will read the password and transmit the password for Level 21.
 
 9. Check the output in the `suconnect` terminal to see the transmitted password for Level 21.
+
+   ```
+   bandit20@bandit:~$ nc -l -v -p 12345
+   Listening on 0.0.0.0 12345
+   Connection received on localhost 52332
+   VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+   NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+   ```
 
 10. Now, you have the password for Level 21. Use it to log in to Level 21 using SSH:
 
