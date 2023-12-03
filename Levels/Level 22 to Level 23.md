@@ -63,49 +63,29 @@ To solve Bandit Level 22 → Level 23, follow these steps:
 
    This script will display the directory of the password of your current user (`bandit22`).
 
-7. Modify the script so it outputs the directory of the password for the user 'bandit23'.
-
-8. Create new temporary directory for modification of code:
+7. Copy the 4th line then modify the '$myname' to output the user 'bandit23':
 
    ```bash
-   mkdir /tmp/cronbandit23/
-   ```
-
-9. Copy the script to your temporary directory:
-
-   ```bash
-
+   echo I am user bandit23 | md5sum | cut -d ' ' -f 1
    ```
 
    ```bash
-   #!/bin/bash
-
-   myname=$(whoami)
-   mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
-
-   echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
-
-   cat /etc/bandit_pass/$myname > /tmp/$mytarget
-
+   8ca319486bfbbc3663ea0fbe81326349
    ```
 
-10. Now that you know the command, execute it to retrieve the password for the next level.
+8. Concatenate the given tmp directory output:
 
-11. Execute the identified command. If it's a script, use `cat` to display its content:
+   ```bash
+    cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+   ```
 
-    ```bash
-    cat /path/to/script.sh
-    ```
+9. The output of the command should contain the password for Level 23.
 
-    If it's a direct command, execute it:
+   ```bash
+   QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G
+   ```
 
-    ```bash
-    /path/to/command
-    ```
-
-12. The output of the command should contain the password for Level 23.
-
-13. Now, you have the password for Level 23. Use it to log in to Level 23 using SSH:
+10. Now, you have the password for Level 23. Use it to log in to Level 23 using SSH:
 
     ```bash
     ssh bandit23@bandit.labs.overthewire.org -p 2220
