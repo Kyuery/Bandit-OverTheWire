@@ -31,7 +31,7 @@ To solve Bandit Level 19 → Level 20, follow these steps:
 3. After executing the `bandit20-do` binary, you should be able to read the password for Level 20. Check the usual location:
 
    ```bash
-   cat /etc/bandit_pass/bandit20
+   ./bandit20-do cat /etc/bandit_pass/bandit20
    ```
 
 4. Now, you have the password for Level 20. Use it to log in to Level 20 using SSH:
