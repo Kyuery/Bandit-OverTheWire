@@ -57,8 +57,17 @@ To solve Bandit Level 21 → Level 22, follow these steps:
    cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
    ```
 
-8.
+8. Concatenate the output directory '/tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv'
+
+   ```bash
+   cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+   ```
+
 9. The output of the command should contain the password for Level 22.
+
+   ```bash
+   WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff
+   ```
 
 10. Now, you have the password for Level 22. Use it to log in to Level 22 using SSH:
 
