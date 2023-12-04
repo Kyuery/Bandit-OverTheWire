@@ -78,45 +78,34 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
     myname=bandit24
     ```
 
-8.  Create a temporary directory for script output:
-
-    ```bash
-    mkdir /tmp/level24
-    ```
-
-9.  Create a shell script in your current directory. Let's call it `my_script.sh`. You can use a text editor like `nano` to create it:
-
-    ```bash
-    nano my_script.sh
-    ```
-
-10. Make the script executable:
-
-    ```bash
-    chmod +x my_script.sh
-    ```
-
-11. Add a line to schedule the execution of your script. For example, to run the script every minute, add:
+8.  Execute the script below to output the password of `bandit24` to the temporary directory.
 
     ```bash
 
-    #!/bin/bash
 
-    cat /etc/bandit_pass/bandit24 > /tmp/level24/password.txt
+    echo "cat /etc/bandit_pass/bandit24 > /tmp/password.txt" > get.sh
 
     ```
 
-12. Save and exit the crontab editor.
+9.  Make the script executable:
 
-13. Wait for a minute, and then check if your script was executed. You may want to check the output. If you want to keep a copy of the output, you can redirect it to a file:
+    ```bash
+    chmod 777 my_script.sh
+    ```
 
-```bash
-* * * * * /path/to/your/script.sh > /path/to/output.txt 2>&1
-```
+10. Save and exit the crontab editor.
 
-Replace `/path/to/output.txt` with the actual path.
+11. Wait for a minute, and then check if your script was executed. You may want to check the output. If you want to keep a copy of the output, you can redirect it to a file:
 
 12. Now, you should be able to retrieve the password for Level 24. The password is typically stored in the `/tmp/` directory or the `/var/spool` directory.
+
+    ```bash
+    cat /tmp/password.txt
+    ```
+
+    ```bash
+    VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
+    ```
 
 13. Once you have the password, use it to log in to Level 24 using SSH:
 
