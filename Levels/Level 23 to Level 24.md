@@ -35,9 +35,9 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 3. Look for the line that specifies the command being executed and examine it to see what it does.
 
    ```bash
-   bandit22@bandit:/etc/cron.d$ cat cronjob_bandit23
-   @reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
-   * * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+   bandit23@bandit:/etc/cron.d$ cat cronjob_bandit24
+   @reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+   * * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
    ```
 
 4. The cron configuration may use a script or directly specify a command. Identify the command that is being executed.
@@ -45,8 +45,7 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 5. Concatenate the script directory to identify its purpose:
 
    ```bash
-   cat /usr/bin/cronjob_bandit23.sh
-   `
+   cat /usr/bin/cronjob_bandit24.sh
 
    ```
 
