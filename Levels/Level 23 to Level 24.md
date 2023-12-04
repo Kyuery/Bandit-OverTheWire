@@ -82,15 +82,14 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 
     ```bash
 
-
-    echo "cat /etc/bandit_pass/bandit24 > /tmp/password.txt" > get.sh
+    echo "cat /etc/bandit_pass/bandit24 > /tmp/password.txt" > get_pass.sh
 
     ```
 
 9.  Make the script executable:
 
     ```bash
-    chmod 777 my_script.sh
+    chmod 777 get_pass.sh
     ```
 
 10. Save and exit the crontab editor.
