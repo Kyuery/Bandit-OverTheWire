@@ -49,13 +49,19 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 
    ```
 
-6. Create a shell script in your home directory. Let's call it `my_script.sh`. You can use a text editor like `nano` to create it:
+6. Create a temporary directory:
+
+   ```bash
+   mkdir /tmp/cron24
+   ```
+
+7. Create a shell script in your home directory. Let's call it `my_script.sh`. You can use a text editor like `nano` to create it:
 
    ```bash
    nano my_script.sh
    ```
 
-7. Inside the `my_script.sh` file, write a simple command. For example, you can write a command that echoes a message:
+8. Inside the `my_script.sh` file, write a simple command. For example, you can write a command that echoes a message:
 
    ```bash
    #!/bin/bash
@@ -64,27 +70,27 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 
    Save and exit the text editor.
 
-8. Make the script executable:
+9. Make the script executable:
 
    ```bash
    chmod +x my_script.sh
    ```
 
-9. Test your script to make sure it works:
+10. Test your script to make sure it works:
 
-   ```bash
-   ./my_script.sh
-   ```
+    ```bash
+    ./my_script.sh
+    ```
 
-   If the script prints the message, it's working.
+    If the script prints the message, it's working.
 
-10. Now, set up the cron job to execute your script. Open your crontab for editing:
+11. Now, set up the cron job to execute your script. Open your crontab for editing:
 
     ```bash
     crontab -e
     ```
 
-11. Add a line to schedule the execution of your script. For example, to run the script every minute, add:
+12. Add a line to schedule the execution of your script. For example, to run the script every minute, add:
 
     ```bash
     * * * * * /path/to/your/script.sh
@@ -92,9 +98,9 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 
     Make sure to replace `/path/to/your/script.sh` with the actual path to your script.
 
-12. Save and exit the crontab editor.
+13. Save and exit the crontab editor.
 
-13. Wait for a minute, and then check if your script was executed. You may want to check the output. If you want to keep a copy of the output, you can redirect it to a file:
+14. Wait for a minute, and then check if your script was executed. You may want to check the output. If you want to keep a copy of the output, you can redirect it to a file:
 
 ```bash
 * * * * * /path/to/your/script.sh > /path/to/output.txt 2>&1
