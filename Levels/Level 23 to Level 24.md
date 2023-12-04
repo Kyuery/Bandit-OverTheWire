@@ -26,23 +26,37 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 
    Enter the password when prompted (the password is the one you found in Level 22).
 
-2. Check the contents of the `/etc/cron.d/` directory to find the configuration for the cron job:
+2. Check the contents of the `/etc/cron.d/cronjob_bandit24` directory to find the configuration for the cron job:
 
    ```bash
-   cat /etc/cron.d/*
+   cat /etc/cron.d/cronjob_bandit24
    ```
 
-   This command will display the contents of all files in the `/etc/cron.d/` directory.
+3. Look for the line that specifies the command being executed and examine it to see what it does.
 
-3. Identify the cron job that is being executed.
+   ```bash
+   bandit22@bandit:/etc/cron.d$ cat cronjob_bandit23
+   @reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+   * * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+   ```
 
-4. Create a shell script in your home directory. Let's call it `my_script.sh`. You can use a text editor like `nano` to create it:
+4. The cron configuration may use a script or directly specify a command. Identify the command that is being executed.
+
+5. Concatenate the script directory to identify its purpose:
+
+   ```bash
+   cat /usr/bin/cronjob_bandit23.sh
+   `
+
+   ```
+
+6. Create a shell script in your home directory. Let's call it `my_script.sh`. You can use a text editor like `nano` to create it:
 
    ```bash
    nano my_script.sh
    ```
 
-5. Inside the `my_script.sh` file, write a simple command. For example, you can write a command that echoes a message:
+7. Inside the `my_script.sh` file, write a simple command. For example, you can write a command that echoes a message:
 
    ```bash
    #!/bin/bash
@@ -51,13 +65,13 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 
    Save and exit the text editor.
 
-6. Make the script executable:
+8. Make the script executable:
 
    ```bash
    chmod +x my_script.sh
    ```
 
-7. Test your script to make sure it works:
+9. Test your script to make sure it works:
 
    ```bash
    ./my_script.sh
@@ -65,23 +79,23 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 
    If the script prints the message, it's working.
 
-8. Now, set up the cron job to execute your script. Open your crontab for editing:
+10. Now, set up the cron job to execute your script. Open your crontab for editing:
 
-   ```bash
-   crontab -e
-   ```
+    ```bash
+    crontab -e
+    ```
 
-9. Add a line to schedule the execution of your script. For example, to run the script every minute, add:
+11. Add a line to schedule the execution of your script. For example, to run the script every minute, add:
 
-   ```bash
-   * * * * * /path/to/your/script.sh
-   ```
+    ```bash
+    * * * * * /path/to/your/script.sh
+    ```
 
-   Make sure to replace `/path/to/your/script.sh` with the actual path to your script.
+    Make sure to replace `/path/to/your/script.sh` with the actual path to your script.
 
-10. Save and exit the crontab editor.
+12. Save and exit the crontab editor.
 
-11. Wait for a minute, and then check if your script was executed. You may want to check the output. If you want to keep a copy of the output, you can redirect it to a file:
+13. Wait for a minute, and then check if your script was executed. You may want to check the output. If you want to keep a copy of the output, you can redirect it to a file:
 
 ```bash
 * * * * * /path/to/your/script.sh > /path/to/output.txt 2>&1

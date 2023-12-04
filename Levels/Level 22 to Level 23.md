@@ -30,8 +30,6 @@ To solve Bandit Level 22 → Level 23, follow these steps:
    cat /etc/cron.d/cronjob_bandit23
    ```
 
-   This command will display the contents of all files in the `cronjob_bandit23` directory.
-
 3. Look for the line that specifies the command being executed and examine it to see what it does.
 
    ```bash
