@@ -49,26 +49,42 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 
    ```
 
-6. Create a temporary directory:
+6. Examine the output:
 
    ```bash
-   mkdir /tmp/cron24
+    #!/bin/bash
+
+    myname=$(whoami)
+
+    cd /var/spool/$myname/foo
+    echo "Executing and deleting all scripts in /var/spool/$myname/foo:"
+    for i in _ ._;
+    do
+    if [ "$i" != "." -a "$i" != ".." ];
+    then
+    echo "Handling $i"
+        owner="$(stat --format "%U" ./$i)"
+        if [ "${owner}" = "bandit23" ]; then
+    timeout -s 9 60 ./$i
+            fi
+            rm -f ./$i
+    fi
+    done
    ```
 
-7. Create a shell script in your home directory. Let's call it `my_script.sh`. You can use a text editor like `nano` to create it:
+This script will display the directory of the password of your current user (`bandit22`).
+
+7. Create a temporary directory:
+
+```bash
+mkdir /tmp/level24
+```
+
+8. Create a shell script in your current directory. Let's call it `my_script.sh`. You can use a text editor like `nano` to create it:
 
    ```bash
    nano my_script.sh
    ```
-
-8. Inside the `my_script.sh` file, write a simple command. For example, you can write a command that echoes a message:
-
-   ```bash
-   #!/bin/bash
-   echo "Hello, this is my script!"
-   ```
-
-   Save and exit the text editor.
 
 9. Make the script executable:
 
@@ -76,31 +92,15 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
    chmod +x my_script.sh
    ```
 
-10. Test your script to make sure it works:
+10. Add a line to schedule the execution of your script. For example, to run the script every minute, add:
 
     ```bash
-    ./my_script.sh
+    cat /etc/bandit_password/bandit24
     ```
 
-    If the script prints the message, it's working.
+11. Save and exit the crontab editor.
 
-11. Now, set up the cron job to execute your script. Open your crontab for editing:
-
-    ```bash
-    crontab -e
-    ```
-
-12. Add a line to schedule the execution of your script. For example, to run the script every minute, add:
-
-    ```bash
-    * * * * * /path/to/your/script.sh
-    ```
-
-    Make sure to replace `/path/to/your/script.sh` with the actual path to your script.
-
-13. Save and exit the crontab editor.
-
-14. Wait for a minute, and then check if your script was executed. You may want to check the output. If you want to keep a copy of the output, you can redirect it to a file:
+12. Wait for a minute, and then check if your script was executed. You may want to check the output. If you want to keep a copy of the output, you can redirect it to a file:
 
 ```bash
 * * * * * /path/to/your/script.sh > /path/to/output.txt 2>&1
