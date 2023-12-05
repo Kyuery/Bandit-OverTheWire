@@ -59,7 +59,7 @@ To solve Bandit Level 22 → Level 23, follow these steps:
    cat /etc/bandit_pass/$myname > /tmp/$mytarget
    ```
 
-   This script will display the directory of the password of your current user (`bandit22`).
+   This Bash script creates an MD5 hash of the current username, then copies the corresponding password file from `/etc/bandit_pass/` to `/tmp/` with the hash as the filename.
 
 7. Copy the 4th line then modify the '$myname' to output the user 'bandit23':
 
@@ -70,6 +70,8 @@ To solve Bandit Level 22 → Level 23, follow these steps:
    ```bash
    8ca319486bfbbc3663ea0fbe81326349
    ```
+
+   This command generates an MD5 hash from the string "I am user bandit23" and extracts the hash value using `cut`, resulting in a shortened representation of the hash.
 
 8. Concatenate the given tmp directory output:
 

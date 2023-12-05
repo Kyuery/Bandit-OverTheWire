@@ -52,20 +52,27 @@ To solve Bandit Level 25 → Level 26, you need to understand the shell being us
    ```bash
    #!/bin/bash
 
-   for i in {0000 .. 9999}
-   do
+   for i in {0000..9999}; do
         echo "VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar $i"
    done
    ```
 
+   This Bash script generates and prints strings by combining a fixed prefix (`VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar`) with numbers from `0000` to `9999` using a `for` loop. Each line of output consists of the prefix followed by a number from the specified range.
+
 7. Change permission of the script for it to be executed:
+
    ```bash
    chomod u+x brute_froce.sh
    ```
+
 8. Execute script:
+
    ```bash
    ./brute_force.sh | nc localhost 30002 | grep -v "Wrong"
    ```
+
+   The command is used for a brute-force attack against a service running on localhost at port 30002. The script generates combinations, the `nc` command sends them to the service, and `grep` filters out lines indicating unsuccessful attempts. The remaining output may represent successful attempts or some specific response from the service.
+
 9. Use the obtained password to log in to Level 26 using SSH:
 
    ```bash

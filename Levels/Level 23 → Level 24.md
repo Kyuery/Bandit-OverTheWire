@@ -72,6 +72,8 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
      done
     ```
 
+    This Bash script executes and deletes scripts in `/var/spool/$myname/foo`. It processes files named `_` and `._`, excluding "." and "..". For each file, it checks if the owner is "bandit23" and, if true, executes it with a timeout of 60 seconds before deleting the file.
+
 7.  Replace `myname` variable from bandit23 to bandit24:
 
     ```bash
@@ -86,17 +88,17 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
 
     ```
 
+    This command creates a script named `get_pass.sh` that contains the command `echo "cat /etc/bandit_pass/bandit24 > /tmp/password.txt"`. The script essentially echoes the command to copy the password of user "bandit24" to a file named `password.txt` in the `/tmp/` directory.
+
 9.  Make the script executable:
 
     ```bash
     chmod 777 get_pass.sh
     ```
 
-10. Save and exit the crontab editor.
+10. Wait for a minute, and then check if your script was executed. You may want to check the output. If you want to keep a copy of the output, you can redirect it to a file:
 
-11. Wait for a minute, and then check if your script was executed. You may want to check the output. If you want to keep a copy of the output, you can redirect it to a file:
-
-12. Now, you should be able to retrieve the password for Level 24. The password is typically stored in the `/tmp/` directory or the `/var/spool` directory.
+11. Now, you should be able to retrieve the password for Level 24. The password is typically stored in the `/tmp/` directory or the `/var/spool` directory.
 
     ```bash
     cat /tmp/password.txt
@@ -106,7 +108,7 @@ To solve Bandit Level 23 → Level 24, you'll need to create a shell script and 
     VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
     ```
 
-13. Once you have the password, use it to log in to Level 24 using SSH:
+12. Once you have the password, use it to log in to Level 24 using SSH:
 
     ```bash
     ssh bandit24@bandit.labs.overthewire.org -p 2220
