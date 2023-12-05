@@ -73,6 +73,8 @@ To solve Bandit Level 25 → Level 26, you need to understand the shell being us
 
    The command is used for a brute-force attack against a service running on localhost at port 30002. The script generates combinations, the `nc` command sends them to the service, and `grep` filters out lines indicating unsuccessful attempts. The remaining output may represent successful attempts or some specific response from the service.
 
+   So, when you use `grep -v`, it will output lines from the input that do not contain the specified pattern. It's a way to exclude lines that match a particular expression.
+
 9. Use the obtained password to log in to Level 26 using SSH:
 
    ```bash
