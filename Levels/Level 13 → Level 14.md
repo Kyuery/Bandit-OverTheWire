@@ -1,6 +1,3 @@
-Certainly! Here's the Markdown representation for Bandit Level 13 → Level 14:
-
-```markdown
 # Bandit Level 13 → Level 14
 
 ## Level Goal
@@ -19,7 +16,6 @@ The password for the next level is stored in `/etc/bandit_pass/bandit14` and can
 ## Helpful Reading Material
 
 - [SSH/OpenSSH/Keys](https://en.wikibooks.org/wiki/OpenSSH/Keys)
-```
 
 This Markdown format maintains the structure and includes sections for the level goal, commands, and additional reading material with a hyperlink.
 
