@@ -20,3 +20,4 @@ You’re ready to start! Begin with Level 0, linked on the left of this page. Go
 ## Note for VMs
 
 If you are using a virtual machine (VM), you may encounter a "broken pipe error" when attempting to connect to overthewire.org via SSH if the network adapter for the VM is configured to use NAT mode. Adding the setting `IPQoS throughput` to `/etc/ssh/ssh_config` should resolve the issue. If this does not solve your problem, the only option then is to change the adapter to Bridged mode.
+
