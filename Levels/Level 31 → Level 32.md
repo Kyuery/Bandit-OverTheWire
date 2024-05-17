@@ -98,28 +98,36 @@ To solve Bandit Level 31 → Level 32, you'll need to interact with a Git reposi
    git status
    ```
 
-10. **Commit the file**:
-    Commit the file that you added.
+10. **Commit and push the file**:
+    Commit the file that you added and enter password.
 
     ```bash
-    git commit -m "Your Message"
+    git commit -m "Your Message" && git push
     ```
-
-11. **Check the Git logs for changes**:
 
     ```bash
-    git log
+    bandit31-git@localhost's password:
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 2 threads
+    Compressing objects: 100% (2/2), done.
+    Writing objects: 100% (3/3), 281 bytes | 281.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    remote: ### Attempting to validate files... ####
+    remote:
+    remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+    remote:
+    remote: Well done! Here is the password for the next level:
+    remote: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
+    remote:
+    remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+    remote:
+    To ssh://localhost:2220/home/bandit31-git/repo
+    ! [remote rejected] master -> master (pre-receive hook declined)
+    error: failed to push some refs to 'ssh://localhost:2220/home/bandit31-git/repo'
     ```
 
-    This will show the commit history. Look for commit messages that might indicate where the password is stored.
-
-12. **Check specific commits if needed**:
-
-    ```bash
-    git show <commit-hash>
-    ```
-
-13. **Log into bandit32 with the found password**:
+11. **Log into bandit32 with the found password**:
     ```bash
     ssh bandit32@bandit.labs.overthewire.org -p 2220
     ```
