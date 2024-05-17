@@ -105,7 +105,21 @@ To solve Bandit Level 31 → Level 32, you'll need to interact with a Git reposi
     git commit -m "Your Message"
     ```
 
-11. **Log into bandit32 with the found password**:
+11. **Check the Git logs for changes**:
+
+    ```bash
+    git log
+    ```
+
+    This will show the commit history. Look for commit messages that might indicate where the password is stored.
+
+12. **Check specific commits if needed**:
+
+    ```bash
+    git show <commit-hash>
+    ```
+
+13. **Log into bandit32 with the found password**:
     ```bash
     ssh bandit32@bandit.labs.overthewire.org -p 2220
     ```
