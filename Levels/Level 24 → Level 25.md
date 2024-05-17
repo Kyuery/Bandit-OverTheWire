@@ -55,7 +55,7 @@ To solve Bandit Level 25 → Level 26, you need to understand the shell being us
    for i in {0..9}{0..9}{0..9}{0..9}
 
    do
-         echo "VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar $i" > list.txt;
+         echo "VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar $i" >> list.txt;
    done
    ```
 
@@ -64,27 +64,30 @@ To solve Bandit Level 25 → Level 26, you need to understand the shell being us
 7. Change permission of the script for it to be executed:
 
    ```bash
-   chomod u+x brute_froce.sh
+   chomod u+x brute_force.sh
    ```
 
 8. Execute script:
 
    ```bash
-   ./brute_force.sh | nc localhost 30002 | grep -v "Wrong"
+   ./brute_force.sh
    ```
 
-   ```
-   uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
-   ```
-
-   The command is used for a brute-force attack against a service running on localhost at port 30002. The script generates combinations, the `nc` command sends them to the service, and `grep` filters out lines indicating unsuccessful attempts. The remaining output may represent successful attempts or some specific response from the service.
-
-   So, when you use `grep -v`, it will output lines from the input that do not contain the specified pattern. It's a way to exclude lines that match a particular expression.
-
-9. Use the obtained password to log in to Level 26 using SSH:
+9. Connect to port 30002 using netcat and with the generated list.
 
    ```bash
-   ssh bandit25@bandit.labs.overthewire.org -p 2220
+   cat list.txt | nc localhost 30002
    ```
+
+   ```bash
+   Correct!
+   The password of user bandit25 is p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
+   ```
+
+10. Use the obtained password to log in to Level 26 using SSH:
+
+    ```bash
+    ssh bandit25@bandit.labs.overthewire.org -p 2220
+    ```
 
 Congratulations! You've completed Bandit Level 25 → Level 26. Keep going, and feel free to ask if you have any questions!
