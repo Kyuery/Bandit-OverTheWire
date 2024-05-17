@@ -52,8 +52,10 @@ To solve Bandit Level 25 → Level 26, you need to understand the shell being us
    ```bash
    #!/bin/bash
 
-   for i in {0000..9999}; do
-        echo "VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar $i"
+   for i in {0..9}{0..9}{0..9}{0..9}
+
+   do
+         echo "VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar $i" > list.txt;
    done
    ```
 
