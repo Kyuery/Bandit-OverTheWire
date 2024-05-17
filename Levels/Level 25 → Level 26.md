@@ -62,8 +62,17 @@ To solve Bandit Level 25 → Level 26, follow these steps:
 
    - Pressing `v` to open the current file in the default text editor (usually `vi` or `vim`).
    - Once in `vi` or `vim`, you can open a shell by typing:
+
      ```bash
-     :!bash
+     :set shell=/usr/bin/bash
+     ```
+
+     ```bash
+     :set shell?
+     ```
+
+     ```bash
+     :bash
      ```
 
    If it uses `more`, you can try to escape by pressing `!` to execute a shell command.
@@ -73,6 +82,10 @@ To solve Bandit Level 25 → Level 26, follow these steps:
 
    ```bash
    cat /etc/bandit_pass/bandit26
+   ```
+
+   ```bash
+   c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1
    ```
 
 7. **Log into bandit26 with the found password**:
