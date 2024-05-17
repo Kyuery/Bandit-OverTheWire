@@ -63,24 +63,25 @@ To solve Bandit Level 30 → Level 31, you'll again be interacting with a Git re
    ```
 
 7. **Explore Git logs and commits**:
-   The password might be stored in the Git commit history. Check the logs to see the commit messages.
+   The password might be stored in the Git tags. Check the logs to see the commit messages.
 
    ```bash
-   git log
+   git tag
    ```
 
 8. **Check the content of specific commits**:
-   If a commit looks promising, check its content:
+   Check the contents of the tag:
 
    ```bash
-   git show <commit-hash>
+   git show secret
    ```
 
-9. **Look for the password**:
-   Look through the files and logs to find the password for bandit31. Once found, note it down.
+   ```bash
+   OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
+   ```
 
-10. **Log into bandit31 with the found password**:
-    ```bash
-    ssh bandit31@bandit.labs.overthewire.org -p 2220
-    ```
-    Use the password you found in the repository.
+9. **Log into bandit31 with the found password**:
+   ```bash
+   ssh bandit31@bandit.labs.overthewire.org -p 2220
+   ```
+   Use the password you found in the repository.

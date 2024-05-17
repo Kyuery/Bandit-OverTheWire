@@ -81,7 +81,7 @@ To solve Bandit Level 29 → Level 30, you'll again be interacting with a Git re
    If a commit branch promising, check its content:
 
    ```bash
-   git checkout <commit-hash>
+   git checkout <branch>
    ```
 
 9. **Look for the password**:
