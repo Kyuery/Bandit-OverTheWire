@@ -41,6 +41,10 @@ To solve Bandit Level 27 → Level 28, you need to interact with a Git repositor
 
    When prompted, enter the password for bandit27.
 
+   ```bash
+   YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
+   ```
+
 4. **Navigate to the cloned repository**:
 
    ```bash
@@ -60,6 +64,10 @@ To solve Bandit Level 27 → Level 28, you need to interact with a Git repositor
 
    ```bash
    cat README.md
+   ```
+
+   ```bash
+   The password to the next level is: AVanL161y9rsbcJIsFHuw35rjaOM19nR
    ```
 
    If the README.md file doesn't contain the password, explore other files or Git logs.
