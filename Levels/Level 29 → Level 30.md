@@ -78,14 +78,28 @@ To solve Bandit Level 29 → Level 30, you'll again be interacting with a Git re
    ```
 
 8. **Check the content of specific commits**:
-   If a commit looks promising, check its content:
+   If a commit branch promising, check its content:
 
    ```bash
-   git show <commit-hash>
+   git checkout <commit-hash>
    ```
 
 9. **Look for the password**:
    Look through the files and logs to find the password for bandit30. Once found, note it down.
+
+   ```bash
+   cat README.md
+   ```
+
+   ```
+   # Bandit Notes
+   Some notes for bandit30 of bandit.
+
+   ## credentials
+
+   - username: bandit30
+   - password: xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS
+   ```
 
 10. **Log into bandit30 with the found password**:
     ```bash
