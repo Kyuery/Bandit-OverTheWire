@@ -50,7 +50,7 @@ To solve Bandit Level 25 → Level 26, follow these steps:
 4. **Log into bandit26**:
 
    ```bash
-   ssh bandit26@localhost -p 2220
+   ssh bandit26@localhost -p 2220 -i bandit26.sshkey
    ```
 
    Use the password for bandit25 when prompted. This will log you into bandit26, but you'll be dropped into the custom shell `/usr/bin/showtext`.
