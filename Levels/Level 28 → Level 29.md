@@ -163,3 +163,9 @@ To solve Bandit Level 28 → Level 29, you need to interact with a Git repositor
     -- password: <TBD>
     +- password: tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S
    ```
+
+8. **Log into bandit29 with the found password**:
+   ```bash
+   ssh bandit29@bandit.labs.overthewire.org -p 2220
+   ```
+   Use the password you found in the repository.
