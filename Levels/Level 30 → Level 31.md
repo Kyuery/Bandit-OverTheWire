@@ -62,23 +62,12 @@ To solve Bandit Level 30 → Level 31, you'll again be interacting with a Git re
    cat README.md
    ```
 
-   ```bash
-   This time your task is to push a file to the remote repository.
-
-   Details:
-      File name: key.txt
-      Content: 'May I come in?'
-      Branch: master
-   ```
-
 7. **Explore Git logs and commits**:
    The password might be stored in the Git tags. Check the logs to see the commit messages.
 
    ```bash
    git tag
    ```
-
-````
 
 8. **Check the content of specific commits**:
    Check the contents of the tag:
@@ -91,9 +80,11 @@ To solve Bandit Level 30 → Level 31, you'll again be interacting with a Git re
    OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
    ```
 
-9. **Log into bandit31 with the found password**:
-   ```bash
-   ssh bandit31@bandit.labs.overthewire.org -p 2220
-   ```
-   Use the password you found in the repository.
-````
+9. **Look for the password**:
+   Look through the files and logs to find the password for bandit31. Once found, note it down.
+
+10. **Log into bandit31 with the found password**:
+    ```bash
+    ssh bandit31@bandit.labs.overthewire.org -p 2220
+    ```
+    Use the password you found in the repository.
