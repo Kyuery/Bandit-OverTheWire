@@ -71,6 +71,10 @@ To solve Bandit Level 25 → Level 26, you need to understand the shell being us
    ./brute_force.sh | nc localhost 30002 | grep -v "Wrong"
    ```
 
+   ```
+   uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+   ```
+
    The command is used for a brute-force attack against a service running on localhost at port 30002. The script generates combinations, the `nc` command sends them to the service, and `grep` filters out lines indicating unsuccessful attempts. The remaining output may represent successful attempts or some specific response from the service.
 
    So, when you use `grep -v`, it will output lines from the input that do not contain the specified pattern. It's a way to exclude lines that match a particular expression.
@@ -80,7 +84,5 @@ To solve Bandit Level 25 → Level 26, you need to understand the shell being us
    ```bash
    ssh bandit26@bandit.labs.overthewire.org -p 2220
    ```
-
-   Enter the password when prompted.
 
 Congratulations! You've completed Bandit Level 25 → Level 26. Keep going, and feel free to ask if you have any questions!
