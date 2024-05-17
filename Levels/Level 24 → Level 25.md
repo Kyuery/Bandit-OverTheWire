@@ -21,7 +21,7 @@ To solve Bandit Level 25 → Level 26, you need to understand the shell being us
 1. Log into the server for Level 25 using SSH. The command is:
 
    ```bash
-   ssh bandit25@bandit.labs.overthewire.org -p 2220
+   ssh bandit24@bandit.labs.overthewire.org -p 2220
    ```
 
    Enter the password when prompted (the password is the one you found in Level 24).
