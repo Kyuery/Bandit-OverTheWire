@@ -82,7 +82,7 @@ To solve Bandit Level 25 → Level 26, you need to understand the shell being us
 9. Use the obtained password to log in to Level 26 using SSH:
 
    ```bash
-   ssh bandit26@bandit.labs.overthewire.org -p 2220
+   ssh bandit25@bandit.labs.overthewire.org -p 2220
    ```
 
 Congratulations! You've completed Bandit Level 25 → Level 26. Keep going, and feel free to ask if you have any questions!
