@@ -62,11 +62,19 @@ To solve Bandit Level 29 → Level 30, you'll again be interacting with a Git re
    cat README.md
    ```
 
-7. **Explore Git logs and commits**:
-   The password might be stored in the Git commit history. Check the logs to see the commit messages.
+7. **Explore Git branches and commits**:
+   The password might be stored in other branches. Check the logs to see the commit messages.
 
    ```bash
-   git log
+   git branch -a
+   ```
+
+   ```bash
+   * master
+   remotes/origin/HEAD -> origin/master
+   remotes/origin/dev
+   remotes/origin/master
+   remotes/origin/sploits-dev
    ```
 
 8. **Check the content of specific commits**:
