@@ -85,8 +85,8 @@ To solve Bandit Level 31 → Level 32, you'll need to interact with a Git reposi
    rm .gitignore
    ```
 
-9. **Commit**:
-   Commit the new file that you have created:
+9. **Add the file created**:
+   Add the new file that you have created:
 
    ```bash
    git add key.txt
@@ -98,8 +98,12 @@ To solve Bandit Level 31 → Level 32, you'll need to interact with a Git reposi
    git status
    ```
 
-10. **Look for the password**:
-    Look through the files and logs to find the password for bandit32. Once found, note it down.
+10. **Commit the file**:
+    Commit the file that you added.
+
+    ```bash
+    git commit -m "Your Message"
+    ```
 
 11. **Log into bandit32 with the found password**:
     ```bash
