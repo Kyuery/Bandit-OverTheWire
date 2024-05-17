@@ -72,7 +72,7 @@ To solve Bandit Level 25 → Level 26, follow these steps:
      ```
 
      ```bash
-     :bash
+     :!bash
      ```
 
    If it uses `more`, you can try to escape by pressing `!` to execute a shell command.

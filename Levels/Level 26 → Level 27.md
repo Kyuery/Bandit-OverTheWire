@@ -35,7 +35,7 @@ To solve Bandit Level 26 → Level 27, follow these steps:
    The password for bandit27 is typically stored in a file named something obvious. It's often a good idea to check files in the home directory:
 
    ```bash
-   cat /home/bandit26/your-password-file
+   cat /home/bandit26/bandit27
    ```
 
    Alternatively, look for hidden files or directories:
@@ -48,10 +48,14 @@ To solve Bandit Level 26 → Level 27, follow these steps:
    In the context of OverTheWire Bandit, the password files are usually stored in `/etc/bandit_pass`. You can read the password for bandit27 directly from there:
 
    ```bash
-   cat /etc/bandit_pass/bandit27
+   ./bandit27-do cat /etc/bandit_pass/bandit27
    ```
 
    Note down the password displayed.
+
+   ```bash
+   YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
+   ```
 
 6. **Log into bandit27 with the found password**:
    ```bash
