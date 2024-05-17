@@ -71,24 +71,37 @@ To solve Bandit Level 31 → Level 32, you'll need to interact with a Git reposi
       Branch: master
    ```
 
-7. **Explore Git logs and commits**:
-   The password might be stored in the Git commit history. Check the logs to see the commit messages.
+7. **follow the instructions based on the README.md**:
+   Create a file `key.txt` and commit it to the master branch.
 
    ```bash
-   git log
+   vim key.txt
    ```
 
-8. **Check the content of specific commits**:
-   If a commit looks promising, check its content:
+8. **Check the `.gitignore` file**:
+   The `.gitignore` is interupting our commit, delete the file.
 
    ```bash
-   git show <commit-hash>
+   rm .gitignore
    ```
 
-9. **Look for the password**:
-   Look through the files and logs to find the password for bandit32. Once found, note it down.
+9. **Commit**:
+   Commit the new file that you have created:
 
-10. **Log into bandit32 with the found password**:
+   ```bash
+   git add key.txt
+   ```
+
+   Check status
+
+   ```bash
+   git status
+   ```
+
+10. **Look for the password**:
+    Look through the files and logs to find the password for bandit32. Once found, note it down.
+
+11. **Log into bandit32 with the found password**:
     ```bash
     ssh bandit32@bandit.labs.overthewire.org -p 2220
     ```
