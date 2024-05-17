@@ -35,7 +35,7 @@ To solve Bandit Level 26 → Level 27, follow these steps:
    The password for bandit27 is typically stored in a file named something obvious. It's often a good idea to check files in the home directory:
 
    ```bash
-   cat /home/bandit26/bandit27
+   cat /home/bandit26/bandit27-do
    ```
 
    Alternatively, look for hidden files or directories:
