@@ -45,8 +45,7 @@ To solve Bandit Level 32 → Level 33, you need to escape from the restricted sh
    odHo63fHiFqcWWJG9rLiLDtPm45KzUKy
    ```
 
-4. **Note down the password**.
-5. **Log into bandit33 with the found password**:
+4. **Log into bandit33 with the found password**:
    ```bash
    ssh bandit33@bandit.labs.overthewire.org -p 2220
    ```
