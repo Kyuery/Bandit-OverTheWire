@@ -39,6 +39,7 @@ To solve Bandit Level 25 → Level 26, follow these steps:
    ```
 
 3. **Understand the shell**:
+
    The shell is `/usr/bin/showtext`. Let's examine what this shell does:
 
    ```bash
@@ -56,6 +57,7 @@ To solve Bandit Level 25 → Level 26, follow these steps:
    Use the password for bandit25 when prompted. This will log you into bandit26, but you'll be dropped into the custom shell `/usr/bin/showtext`.
 
 5. **Break out of the custom shell**:
+
    The `/usr/bin/showtext` script is designed to show text files but may have vulnerabilities or escape sequences. Try exiting the script or interrupting it. One common technique is to check if it allows you to spawn a new shell:
 
    If it uses `more` or `less` to display text, you might be able to escape to a shell by:
@@ -78,6 +80,7 @@ To solve Bandit Level 25 → Level 26, follow these steps:
    If it uses `more`, you can try to escape by pressing `!` to execute a shell command.
 
 6. **Find the password for bandit26**:
+
    Once you have access to a shell, you can navigate and find the password:
 
    ```bash

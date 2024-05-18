@@ -33,6 +33,7 @@ To solve Bandit Level 29 → Level 30, you'll again be interacting with a Git re
    ```
 
 3. **Clone the Git repository**:
+
    Use Git to clone the repository provided in the level goal. Since the repository is on the same server but requires a different username, you'll need to specify the correct username and port.
 
    ```bash
@@ -56,6 +57,7 @@ To solve Bandit Level 29 → Level 30, you'll again be interacting with a Git re
    Look for files that might contain the password for the next level.
 
 6. **Read the contents of the files**:
+
    Check the files within the repository to find the password. Typically, it might be stored in a README file or another text file.
 
    ```bash
@@ -63,6 +65,7 @@ To solve Bandit Level 29 → Level 30, you'll again be interacting with a Git re
    ```
 
 7. **Explore Git branches and commits**:
+
    The password might be stored in other branches. Check the logs to see the commit messages.
 
    ```bash
@@ -78,6 +81,7 @@ To solve Bandit Level 29 → Level 30, you'll again be interacting with a Git re
    ```
 
 8. **Check the content of specific commits**:
+
    If a commit branch promising, check its content:
 
    ```bash
@@ -85,6 +89,7 @@ To solve Bandit Level 29 → Level 30, you'll again be interacting with a Git re
    ```
 
 9. **Look for the password**:
+
    Look through the files and logs to find the password for bandit30. Once found, note it down.
 
    ```bash

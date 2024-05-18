@@ -33,6 +33,7 @@ To solve Bandit Level 31 → Level 32, you'll need to interact with a Git reposi
    ```
 
 3. **Clone the Git repository**:
+
    Use Git to clone the repository provided in the level goal. Since the repository is on the same server but requires a different username, you'll need to specify the correct username and port.
 
    ```bash
@@ -56,6 +57,7 @@ To solve Bandit Level 31 → Level 32, you'll need to interact with a Git reposi
    Look for files that might contain the password for the next level.
 
 6. **Read the contents of the files**:
+
    Check the files within the repository to find the password. Typically, it might be stored in a README file or another text file.
 
    ```bash
@@ -72,6 +74,7 @@ To solve Bandit Level 31 → Level 32, you'll need to interact with a Git reposi
    ```
 
 7. **follow the instructions based on the README.md**:
+
    Create a file `key.txt` and commit it to the master branch.
 
    ```bash

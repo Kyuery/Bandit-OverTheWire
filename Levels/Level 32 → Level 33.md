@@ -21,7 +21,9 @@ To solve Bandit Level 32 → Level 33, you need to escape from the restricted sh
 
    Enter the password for bandit32 when prompted.
 
-2. **Run the provided shell command**:
+2. **Utilize Positional Parameters**:
+
+   Notice that you can't enter commands due to it being always in uppercase, utilize positional parameters.
 
    ```bash
    sh

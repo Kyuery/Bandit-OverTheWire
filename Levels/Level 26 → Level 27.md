@@ -21,6 +21,7 @@ To solve Bandit Level 26 → Level 27, follow these steps:
    Enter the password for bandit26 when prompted.
 
 2. **Get a shell if needed**:
+
    If you are in a restricted shell, you may need to break out of it as you did in the previous level. However, since you should already have a shell, you can proceed to the next steps directly.
 
 3. **List the files in the home directory**:
@@ -32,6 +33,7 @@ To solve Bandit Level 26 → Level 27, follow these steps:
    Look for any files that might contain the password.
 
 4. **Read the password file**:
+
    The password for bandit27 is typically stored in a file named something obvious. It's often a good idea to check files in the home directory:
 
    ```bash
@@ -45,6 +47,7 @@ To solve Bandit Level 26 → Level 27, follow these steps:
    ```
 
 5. **Find the password file**:
+
    In the context of OverTheWire Bandit, the password files are usually stored in `/etc/bandit_pass`. You can read the password for bandit27 directly from there:
 
    ```bash
