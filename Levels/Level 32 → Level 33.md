@@ -25,30 +25,28 @@ To solve Bandit Level 32 → Level 33, you need to escape from the restricted sh
 
    Notice that you can't enter commands due to it being always in uppercase, utilize positional parameters.
 
+   To run sh command:
+
    ```bash
-   sh
+   $0
    ```
 
    This will start a new shell session.
 
-3. **Check the home directory for any files**:
+3. **Read the content of the `bandit_pass` file**:
 
    ```bash
-   ls
-   ```
-
-   This will list any files in the home directory.
-
-4. **Read the content of the README file**:
-
-   ```bash
-   cat README.txt
+   cat /etc/bandit_pass/bandit33
    ```
 
    The password for the next level should be in this file.
 
-5. **Note down the password**.
-6. **Log into bandit33 with the found password**:
+   ```bash
+   odHo63fHiFqcWWJG9rLiLDtPm45KzUKy
+   ```
+
+4. **Note down the password**.
+5. **Log into bandit33 with the found password**:
    ```bash
    ssh bandit33@bandit.labs.overthewire.org -p 2220
    ```
